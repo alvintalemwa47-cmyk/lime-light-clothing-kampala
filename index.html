@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Limelight LL — Be Seen</title>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Cg3K6fxB0xKzTo7HrQGKX_E6mS3TrILV9Vowq2oymIW0aeaKoO4o41SnYidp8Rk1erApbhB05mWsIaZnhq3-nstBUPQdxi_qaGHfARkhC1j2hUhEiJmPXopQO28VokLhHaFBrJjhrXX3D739TcATkXqJ648hBWCA0QhDnvr3rzininoJPdM0TwiFgZUQcrua7yUffcYg8Nv-AbWDxTi7ifKDufUNfq9ZTOiiQu9-610ktJdpXSAuNDkgP2_DjxKIPOl7UgXvVJ5NZKA2-XcjDYNpaS6GmVGw1KjfN9ruRzyXAZT74aI3bdTMaX27-ZVBh-U_-THhshZxIcVv5uqOEEugNFRcph5YyObWrkkh6Ggx58IfBps7lVsHYzlAty-0D1fq1SFFGzcGQZQARYyBSJc88aa29UwLPWY8Oz9-uuNWcwfbSrtNaMCJr_rnhHYuwMc9gOgWw2Z215neywOcMvrM17C-3Q983TeLeXJXFV_gJbW7yb38lH7ehVyhlI86DtGXm9vhmHczLUN9NtUi4K2BTzDSVQLUeBEH1Q76WagMFpXuhVmwleYSn4HXg7EH2ah9PXrsdVNriAKGEb8n7pe0pXa6W0oIHVlk4GZXkDLcVKbqz6hJbuNl717s87EsKTFBIyZRdRxXnyixwi3qvx9O4apwSSPgcE7_CsxXSqzmqnBmMrDTS7Lq-3fK5kvSbjznGnxPWDmaU4d2Zc_BBzHN3N0BesjWyBawYNN36U0biKLJkE0G4oiv9xDkQCtqc3IVpE9BnVjtM-UqhGw4hpkyCIhBHwu9B2Ja68y70uT4yVU0NuRhRAGxAu3eC4CYrPUJrbTJUpuIKonrtJj9wS2Xx85nx5Qwlsy4oyfgjfOq_EoiYrE0WkRHX5EvauMbhrcNUAIVOAt6AddOOJp6Y_gy82ker3z4EWayiSI-AOUSRGpstBVeMTtTd0tx6f_uTaNOr51bf-sfu0hko52SBV7xBxU3d88MZjmEvZ0ojWSziXD2EjpSUn3tXo3HK-mxOVgAqNjky_4VTo5nLJgbMR25Iy6Ak-9vv9vjyxwIS25VZqcv7yNQ_Q7RlYNC302AG95LakoK3LcGyplwMp9EWa_lHRYyi_KajZxGy7trr0e1u4yU4-Fm34HopA3Z433p8Mh5VBMuXbpaHfoadx4Vkap2ACx_sX2V03F30AJtESdlwsu_QHYwtqQ8A_GWNn7A0-GNTJHWcyrF-TSAQwzYbpm52XzCuxJ95hCBRC9LasfKkyXP2CEIxkaa7bOl4B9kYnORDQD-4ua4OYgfnAHEhRjatiIJPedcGILTenvoAgeliBHxPIsIWZbqq2pdkDWf89BY6IzWJPmcc0tH96odO-gQ4eBpHfQi_q3Zt9mf-bVVl_Rwxo7uSSG_8fjsMz0rAbVkonR9nPIqb5YWcJas7xsDEBR9sZqrSyXpkdY6OK7SiX_-t7_b3QGvTa6cA7lVoPaxellTqIZBtkDUy0CKJwjRSlSA90z5Q58zrMlnVVn2E1zbAFmhlsVm5H4xmZgp3to4iSlt2cHlydWv1hGg5HXsC9eC3i53zOAIU8IyUck-X8N-hpARWP_zwNkWuhG2byuA_n4Fh3ZiMPtEFdXHhoRyXV1iX_ioOzt_QKeudMHyypNjnIeprCI_k815WOTjyO-ISDkjv33Bf63WwKm-mu2IVJDAxffmyqyTD6tMi1g" nonce="3e3050749ab9010d6c6d7295c4b1ffdf" charset="UTF-8"></script><style>
+  :root {
+    --black: #0a0a0a;
+    --white: #f5f0e8;
+    --lime: #d4ff00;
+    --gold: #c8832a;
+    --mid: #1a1a1a;
+    --border: rgba(212,255,0,0.15);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    cursor: default;
+  }
+
+  /* ── NOISE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0.4;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 5vw;
+    background: rgba(10,10,10,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: var(--lime);
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: clamp(16px, 3vw, 36px);
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    letter-spacing: 3px;
+    color: var(--white);
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s, color 0.2s;
+  }
+  .nav-links a:hover { opacity: 1; color: var(--lime); }
+
+  .nav-cart {
+    position: relative;
+    background: var(--lime);
+    color: var(--black);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .nav-cart:hover { background: #fff; transform: scale(1.03); }
+  .cart-count {
+    position: absolute;
+    top: -6px; right: -6px;
+    background: var(--gold);
+    color: #fff;
+    border-radius: 50%;
+    width: 18px; height: 18px;
+    font-size: 0.65rem;
+    display: flex;align-items:center;justify-content:center;
+    font-family: 'DM Sans',sans-serif;
+    font-weight: 700;
+  }
+
+  /* ── HAMBURGER ── */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--white); transition: all 0.3s; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 5vw 60px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 70% 60% at 50% 40%, rgba(212,255,0,0.07) 0%, transparent 70%),
+                radial-gradient(ellipse 40% 30% at 80% 80%, rgba(200,131,42,0.08) 0%, transparent 60%);
+  }
+
+  .hero-eyebrow {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 8px;
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+    color: var(--lime);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.8s 0.2s forwards;
+  }
+
+  .hero-title {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: clamp(3.5rem, 14vw, 11rem);
+    line-height: 0.9;
+    color: var(--white);
+    opacity: 0;
+    animation: fadeUp 0.9s 0.4s forwards;
+    position: relative;
+  }
+
+  .hero-title .accent { color: var(--lime); }
+
+  .hero-sub {
+    font-size: clamp(0.85rem, 2vw, 1.05rem);
+    font-weight: 300;
+    opacity: 0;
+    max-width: 420px;
+    margin-top: 24px;
+    line-height: 1.7;
+    color: rgba(245,240,232,0.6);
+    animation: fadeUp 0.9s 0.6s forwards;
+  }
+
+  .hero-ctas {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeUp 0.9s 0.8s forwards;
+  }
+
+  .btn-primary {
+    background: var(--lime);
+    color: var(--black);
+    border: none;
+    padding: 16px 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: transform 0.15s, box-shadow 0.15s;
+  }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,255,0,0.3); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    border: 1px solid rgba(245,240,232,0.3);
+    padding: 16px 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .btn-outline:hover { border-color: var(--lime); color: var(--lime); }
+
+  /* ── TICKER ── */
+  .ticker-wrap {
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+    background: var(--mid);
+  }
+  .ticker {
+    display: flex;
+    gap: 60px;
+    animation: ticker 18s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .ticker span {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    color: rgba(245,240,232,0.5);
+  }
+  .ticker .dot { color: var(--lime); }
+  @keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ── SECTION LABEL ── */
+  .section-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 6px;
+    color: var(--lime);
+    margin-bottom: 12px;
+  }
+
+  .section-heading {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: clamp(2rem, 6vw, 4rem);
+    line-height: 1;
+    color: var(--white);
+    margin-bottom: 40px;
+  }
+
+  /* ── SHOP SECTION ── */
+  .shop {
+    padding: 100px 5vw;
+  }
+
+  .shop-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .filter-tabs {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .filter-tab {
+    background: transparent;
+    border: 1px solid rgba(245,240,232,0.2);
+    color: rgba(245,240,232,0.5);
+    padding: 8px 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filter-tab.active, .filter-tab:hover {
+    background: var(--lime);
+    border-color: var(--lime);
+    color: var(--black);
+  }
+
+  /* ── PRODUCT GRID ── */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+  }
+
+  .product-card {
+    background: var(--mid);
+    border: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s, border-color 0.3s;
+    cursor: pointer;
+  }
+  .product-card:hover { transform: translateY(-6px); border-color: var(--lime); }
+
+  .product-img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* SVG placeholder product images */
+  .product-placeholder {
+    width: 100%;
+    aspect-ratio: 3/4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s;
+  }
+  .product-card:hover .product-placeholder { transform: scale(1.04); }
+
+  .product-placeholder.tee-1 { background: #111; }
+  .product-placeholder.tee-2 { background: #0d0d0d; }
+  .product-placeholder.cap-1 { background: #1a1000; }
+  .product-placeholder.hoodie-1 { background: #0f0f0f; }
+  .product-placeholder.tee-3 { background: #111; }
+  .product-placeholder.cap-2 { background: #1c1000; }
+
+  .tag-new, .tag-sold {
+    position: absolute;
+    top: 14px; left: 14px;
+    padding: 4px 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    font-size: 0.75rem;
+    z-index: 2;
+  }
+  .tag-new { background: var(--lime); color: var(--black); }
+  .tag-sold { background: rgba(255,255,255,0.1); color: var(--white); border: 1px solid rgba(255,255,255,0.2); }
+
+  .wishlist-btn {
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 34px; height: 34px;
+    background: rgba(10,10,10,0.7);
+    border: none;
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex; align-items:center;justify-content:center;
+    transition: background 0.2s, color 0.2s;
+    z-index: 2;
+    border-radius: 50%;
+  }
+  .wishlist-btn:hover, .wishlist-btn.liked { background: var(--lime); color: var(--black); }
+
+  .product-info {
+    padding: 18px 18px 20px;
+  }
+
+  .product-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+
+  .product-category {
+    font-size: 0.75rem;
+    color: rgba(245,240,232,0.4);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  .product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .product-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    color: var(--lime);
+    letter-spacing: 1px;
+  }
+
+  .add-btn {
+    background: var(--white);
+    color: var(--black);
+    border: none;
+    padding: 8px 16px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .add-btn:hover { background: var(--lime); }
+
+  /* ── FEATURE STRIP ── */
+  .feature-strip {
+    background: var(--lime);
+    padding: 60px 5vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+  }
+
+  .feature-item { text-align: center; }
+
+  .feature-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .feature-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    color: var(--black);
+    margin-bottom: 6px;
+  }
+
+  .feature-desc {
+    font-size: 0.8rem;
+    color: rgba(0,0,0,0.6);
+    line-height: 1.5;
+  }
+
+  /* ── BRAND STORY ── */
+  .story {
+    padding: 120px 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+
+  .story-visual {
+    position: relative;
+    aspect-ratio: 1;
+  }
+
+  .story-logo-big {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--mid);
+    border: 1px solid var(--border);
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: clamp(4rem, 10vw, 8rem);
+    color: var(--lime);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .story-logo-big::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(212,255,0,0.1), transparent 70%);
+  }
+
+  .story-accent-block {
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 60%;
+    height: 60%;
+    border: 2px solid var(--gold);
+    z-index: -1;
+  }
+
+  .story-text .section-heading { margin-bottom: 20px; }
+
+  .story-body {
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    line-height: 1.8;
+    color: rgba(245,240,232,0.65);
+    margin-bottom: 30px;
+  }
+
+  .stats-row {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item { }
+  .stat-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: var(--lime);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: rgba(245,240,232,0.4);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  /* ── NEWSLETTER ── */
+  .newsletter {
+    padding: 100px 5vw;
+    text-align: center;
+    background: var(--mid);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .newsletter-form {
+    display: flex;
+    max-width: 480px;
+    margin: 30px auto 0;
+    gap: 0;
+  }
+
+  .newsletter-input {
+    flex: 1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-right: none;
+    color: var(--white);
+    padding: 14px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .newsletter-input::placeholder { color: rgba(255,255,255,0.3); }
+  .newsletter-input:focus { border-color: var(--lime); }
+
+  .newsletter-btn {
+    background: var(--lime);
+    color: var(--black);
+    border: none;
+    padding: 14px 28px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+  }
+  .newsletter-btn:hover { background: #fff; }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 60px 5vw 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 40px;
+  }
+
+  .footer-brand .nav-logo { font-size: 1.8rem; display: block; margin-bottom: 12px; }
+
+  .footer-tagline {
+    font-size: 0.8rem;
+    color: rgba(245,240,232,0.4);
+    line-height: 1.6;
+    max-width: 200px;
+  }
+
+  .footer-col h4 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    color: var(--lime);
+    margin-bottom: 16px;
+  }
+
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 10px; }
+  .footer-col ul a {
+    font-size: 0.85rem;
+    color: rgba(245,240,232,0.5);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-col ul a:hover { color: var(--lime); }
+
+  .footer-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .social-btn {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(255,255,255,0.15);
+    background: transparent;
+    color: var(--white);
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: border-color 0.2s, color 0.2s, background 0.2s;
+    text-decoration: none;
+  }
+  .social-btn:hover { border-color: var(--lime); color: var(--lime); }
+
+  .footer-bottom {
+    padding: 24px 5vw;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+    color: rgba(245,240,232,0.3);
+    letter-spacing: 1px;
+  }
+
+  /* ── CART DRAWER ── */
+  .cart-drawer {
+    position: fixed;
+    top: 0; right: -400px;
+    width: 360px;
+    height: 100%;
+    background: #111;
+    border-left: 1px solid var(--border);
+    z-index: 1100;
+    transition: right 0.35s cubic-bezier(0.4,0,0.2,1);
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+  }
+  .cart-drawer.open { right: 0; }
+
+  .cart-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1050;
+    display: none;
+    backdrop-filter: blur(4px);
+  }
+  .cart-overlay.open { display: block; }
+
+  .cart-header {
+    padding: 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cart-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+  }
+
+  .cart-close {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.4rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    line-height: 1;
+  }
+  .cart-close:hover { opacity: 1; }
+
+  .cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 24px;
+  }
+
+  .cart-item {
+    display: flex;
+    gap: 14px;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .cart-item-thumb {
+    width: 64px; height: 80px;
+    background: var(--mid);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 1.2rem;
+    color: var(--lime);
+    flex-shrink: 0;
+  }
+
+  .cart-item-info { flex: 1; }
+
+  .cart-item-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .cart-item-meta {
+    font-size: 0.75rem;
+    color: rgba(245,240,232,0.4);
+    margin-top: 4px;
+  }
+
+  .cart-item-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    color: var(--lime);
+    margin-top: 8px;
+  }
+
+  .cart-remove {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.3);
+    cursor: pointer;
+    font-size: 0.75rem;
+    padding: 0;
+    transition: color 0.2s;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+  .cart-remove:hover { color: #ff4444; }
+
+  .cart-empty-msg {
+    text-align: center;
+    padding: 60px 20px;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.9rem;
+  }
+
+  .cart-footer {
+    padding: 24px;
+    border-top: 1px solid var(--border);
+  }
+
+  .cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .cart-total-label {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.5);
+  }
+
+  .cart-total-price {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5rem;
+    color: var(--lime);
+  }
+
+  .checkout-btn {
+    width: 100%;
+    background: var(--lime);
+    color: var(--black);
+    border: none;
+    padding: 16px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .checkout-btn:hover { background: #fff; }
+
+  /* ── TOAST ── */
+  .toast {
+    position: fixed;
+    bottom: 30px; left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: var(--lime);
+    color: var(--black);
+    padding: 12px 28px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    z-index: 2000;
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+    white-space: nowrap;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── MOBILE NAV ── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10,10,10,0.98);
+    z-index: 850;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 2.5rem;
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .mobile-menu a:hover { color: var(--lime); }
+  .mobile-close {
+    position: absolute;
+    top: 20px; right: 5vw;
+    background: none; border: none;
+    color: var(--white); font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+
+    .story {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      padding: 80px 5vw;
+    }
+
+    .story-visual { max-width: 300px; margin: 0 auto; }
+    .story-accent-block { display: none; }
+
+    .newsletter-form { flex-direction: column; }
+    .newsletter-input { border-right: 1px solid rgba(255,255,255,0.15); border-bottom: none; }
+    .newsletter-btn { width: 100%; }
+
+    footer { grid-template-columns: 1fr 1fr; }
+    .footer-brand { grid-column: 1 / -1; }
+
+    .cart-drawer { width: 100%; right: -100%; }
+
+    .product-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  }
+
+  @media (max-width: 480px) {
+    .product-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .product-info { padding: 12px; }
+    .product-name { font-size: 0.95rem; }
+    footer { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a href="#" class="nav-logo">Limelight</a>
+  <ul class="nav-links">
+    <li><a href="#shop">Shop</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#newsletter">Contact</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <button class="nav-cart" id="cartBtn">
+      CART
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── MOBILE MENU ── -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#shop" onclick="closeMobile()">Shop</a>
+  <a href="#story" onclick="closeMobile()">Story</a>
+  <a href="#newsletter" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <p class="hero-eyebrow">New Collection — 2025</p>
+  <h1 class="hero-title">Lime<span class="accent">light</span></h1>
+  <p class="hero-sub">Streetwear for those who refuse to go unnoticed. Wear the brand. Own the room.</p>
+  <div class="hero-ctas">
+    <button class="btn-primary" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">SHOP NOW</button>
+    <button class="btn-outline" onclick="document.getElementById('story').scrollIntoView({behavior:'smooth'})">OUR STORY</button>
+  </div>
+</section>
+
+<!-- ── TICKER ── -->
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>LIMELIGHT LL</span><span class="dot">◆</span>
+    <span>BE SEEN</span><span class="dot">◆</span>
+    <span>STREETWEAR</span><span class="dot">◆</span>
+    <span>NEW DROP</span><span class="dot">◆</span>
+    <span>LIMELIGHT LL</span><span class="dot">◆</span>
+    <span>LIMITED EDITION</span><span class="dot">◆</span>
+    <span>AUTHENTIC CULTURE</span><span class="dot">◆</span>
+    <span>LIMELIGHT LL</span><span class="dot">◆</span>
+    <span>BE SEEN</span><span class="dot">◆</span>
+    <span>STREETWEAR</span><span class="dot">◆</span>
+    <span>NEW DROP</span><span class="dot">◆</span>
+    <span>LIMELIGHT LL</span><span class="dot">◆</span>
+    <span>LIMITED EDITION</span><span class="dot">◆</span>
+    <span>AUTHENTIC CULTURE</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<!-- ── SHOP ── -->
+<section class="shop" id="shop">
+  <div class="shop-header">
+    <div>
+      <p class="section-label">— The Collection</p>
+      <h2 class="section-heading">Shop All</h2>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterProducts('all', this)">All</button>
+      <button class="filter-tab" onclick="filterProducts('tees', this)">Tees</button>
+      <button class="filter-tab" onclick="filterProducts('caps', this)">Caps</button>
+      <button class="filter-tab" onclick="filterProducts('hoodies', this)">Hoodies</button>
+    </div>
+  </div>
+
+  <div class="product-grid" id="productGrid">
+
+    <!-- Tee 1 -->
+    <div class="product-card" data-cat="tees">
+      <div class="product-placeholder tee-1">
+        <svg width="100%" height="100%" viewBox="0 0 300 400" style="position:absolute;inset:0">
+          <defs>
+            <pattern id="grid1" width="18" height="18" patternUnits="userSpaceOnUse">
+              <rect width="18" height="18" fill="none" stroke="rgba(212,255,0,0.18)" stroke-width="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="300" height="400" fill="#111"/>
+          <rect width="300" height="400" fill="url(#grid1)"/>
+          <!-- T-shirt silhouette -->
+          <path d="M80 80 L60 110 L90 120 L90 320 L210 320 L210 120 L240 110 L220 80 L185 100 Q150 115 115 100 Z" fill="#0a0a0a" stroke="rgba(212,255,0,0.3)" stroke-width="1.5"/>
+          <!-- LL logo on chest -->
+          <circle cx="150" cy="200" r="38" fill="none" stroke="rgba(212,255,0,0.8)" stroke-width="2"/>
+          <text x="150" y="212" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="28" fill="rgba(212,255,0,0.9)">LL</text>
+          <!-- smiley graphic hint -->
+          <rect x="100" y="130" width="50" height="50" fill="rgba(212,255,0,0.12)" rx="2"/>
+          <circle cx="125" cy="155" r="20" fill="none" stroke="rgba(212,255,0,0.5)" stroke-width="1"/>
+          <circle cx="118" cy="150" r="2" fill="rgba(212,255,0,0.7)"/>
+          <circle cx="132" cy="150" r="2" fill="rgba(212,255,0,0.7)"/>
+          <path d="M116 162 Q125 170 134 162" fill="none" stroke="rgba(212,255,0,0.7)" stroke-width="1.5"/>
+          <!-- brand text -->
+          <text x="150" y="350" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="14" fill="rgba(212,255,0,0.4)">Limelight</text>
+        </svg>
+      </div>
+      <span class="tag-new">NEW</span>
+      <button class="wishlist-btn" onclick="toggleWishlist(this)">♡</button>
+      <div class="product-info">
+        <p class="product-name">GRAPHIC TEE VOL.1</p>
+        <p class="product-category">Tee · Unisex</p>
+        <div class="product-footer">
+          <span class="product-price">UGX 85,000</span>
+          <button class="add-btn" onclick="addToCart('Graphic Tee Vol.1', 85000)">ADD</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cap 1 (trucker) -->
+    <div class="product-card" data-cat="caps">
+      <div class="product-placeholder cap-1">
+        <svg width="100%" height="100%" viewBox="0 0 300 400" style="position:absolute;inset:0">
+          <rect width="300" height="400" fill="#110a00"/>
+          <!-- cap brim -->
+          <ellipse cx="150" cy="260" rx="110" ry="22" fill="#c8832a" opacity="0.9"/>
+          <!-- cap body -->
+          <path d="M40 240 Q40 120 150 110 Q260 120 260 240 Z" fill="#c8832a"/>
+          <!-- mesh back half -->
+          <defs>
+            <pattern id="mesh" width="10" height="10" patternUnits="userSpaceOnUse">
+              <circle cx="5" cy="5" r="3" fill="none" stroke="#a06820" stroke-width="0.8"/>
+            </pattern>
+          </defs>
+          <path d="M150 110 Q230 118 260 240 L150 240 Z" fill="url(#mesh)" opacity="0.7"/>
+          <!-- panel seam -->
+          <line x1="150" y1="110" x2="150" y2="240" stroke="#a06820" stroke-width="1"/>
+          <!-- button top -->
+          <circle cx="150" cy="113" r="8" fill="#a06820"/>
+          <!-- Limelight text on front panel -->
+          <text x="130" y="175" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="20" fill="#1a0a00">Limelight</text>
+          <text x="130" y="198" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="20" fill="#1a0a00">LL</text>
+          <!-- snapback -->
+          <rect x="90" y="252" width="120" height="10" rx="3" fill="#a06820"/>
+          <rect x="122" y="252" width="56" height="10" rx="3" fill="#8a5a18"/>
+        </svg>
+      </div>
+      <span class="tag-new">NEW</span>
+      <button class="wishlist-btn" onclick="toggleWishlist(this)">♡</button>
+      <div class="product-info">
+        <p class="product-name">TRUCKER CAP — GOLD</p>
+        <p class="product-category">Caps · One Size</p>
+        <div class="product-footer">
+          <span class="product-price">UGX 65,000</span>
+          <button class="add-btn" onclick="addToCart('Trucker Cap — Gold', 65000)">ADD</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hoodie -->
+    <div class="product-card" data-cat="hoodies">
+      <div class="product-placeholder hoodie-1">
+        <svg width="100%" height="100%" viewBox="0 0 300 400" style="position:absolute;inset:0">
+          <rect width="300" height="400" fill="#0f0f0f"/>
+          <!-- hoodie shape -->
+          <path d="M70 120 L50 160 L80 170 L80 340 L220 340 L220 170 L250 160 L230 120 L195 105 Q180 130 150 135 Q120 130 105 105 Z" fill="#1a1a1a" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+          <!-- hood -->
+          <path d="M105 105 Q120 80 150 78 Q180 80 195 105 Q180 115 150 118 Q120 115 105 105 Z" fill="#222" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <!-- front pocket -->
+          <rect x="100" y="255" width="100" height="50" rx="3" fill="#222" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+          <!-- LL watermark chest -->
+          <circle cx="150" cy="200" r="32" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+          <text x="150" y="211" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="24" fill="rgba(255,255,255,0.2)">LL</text>
+          <!-- drawstrings -->
+          <line x1="138" y1="132" x2="132" y2="170" stroke="rgba(200,131,42,0.6)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="162" y1="132" x2="168" y2="170" stroke="rgba(200,131,42,0.6)" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="tag-new">NEW</span>
+      <button class="wishlist-btn" onclick="toggleWishlist(this)">♡</button>
+      <div class="product-info">
+        <p class="product-name">LL PULLOVER HOODIE</p>
+        <p class="product-category">Hoodies · Unisex</p>
+        <div class="product-footer">
+          <span class="product-price">UGX 145,000</span>
+          <button class="add-btn" onclick="addToCart('LL Pullover Hoodie', 145000)">ADD</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tee 2 -->
+    <div class="product-card" data-cat="tees">
+      <div class="product-placeholder tee-2">
+        <svg width="100%" height="100%" viewBox="0 0 300 400" style="position:absolute;inset:0">
+          <rect width="300" height="400" fill="#0d0d0d"/>
+          <!-- tee -->
+          <path d="M80 80 L60 110 L90 120 L90 320 L210 320 L210 120 L240 110 L220 80 L185 100 Q150 115 115 100 Z" fill="#111" stroke="rgba(200,131,42,0.3)" stroke-width="1.5"/>
+          <!-- big LIMELIGHT text across chest -->
+          <text x="150" y="175" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="22" fill="rgba(200,131,42,0.9)">Limelight</text>
+          <!-- big LL below -->
+          <text x="150" y="225" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="48" fill="rgba(200,131,42,0.15)">LL</text>
+          <!-- stripe accent -->
+          <rect x="90" y="240" width="120" height="2" fill="rgba(200,131,42,0.5)"/>
+          <rect x="90" y="246" width="80" height="2" fill="rgba(200,131,42,0.25)"/>
+        </svg>
+      </div>
+      <button class="wishlist-btn" onclick="toggleWishlist(this)">♡</button>
+      <div class="product-info">
+        <p class="product-name">OLD ENGLISH TEE</p>
+        <p class="product-category">Tee · Unisex</p>
+        <div class="product-footer">
+          <span class="product-price">UGX 75,000</span>
+          <button class="add-btn" onclick="addToCart('Old English Tee', 75000)">ADD</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tee 3 -->
+    <div class="product-card" data-cat="tees">
+      <div class="product-placeholder tee-3">
+        <svg width="100%" height="100%" viewBox="0 0 300 400" style="position:absolute;inset:0">
+          <rect width="300" height="400" fill="#111"/>
+          <path d="M80 80 L60 110 L90 120 L90 320 L210 320 L210 120 L240 110 L220 80 L185 100 Q150 115 115 100 Z" fill="#0a0a0a" stroke="rgba(212,255,0,0.15)" stroke-width="1"/>
+          <!-- back-print style big LL -->
+          <text x="150" y="230" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="100" fill="rgba(212,255,0,0.07)">LL</text>
+          <!-- small front chest logo -->
+          <circle cx="116" cy="155" r="18" fill="none" stroke="rgba(212,255,0,0.6)" stroke-width="1.5"/>
+          <text x="116" y="161" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="13" fill="rgba(212,255,0,0.7)">LL</text>
+        </svg>
+      </div>
+      <button class="wishlist-btn" onclick="toggleWishlist(this)">♡</button>
+      <div class="product-info">
+        <p class="product-name">CHEST LOGO TEE</p>
+        <p class="product-category">Tee · Unisex</p>
+        <div class="product-footer">
+          <span class="product-price">UGX 70,000</span>
+          <button class="add-btn" onclick="addToCart('Chest Logo Tee', 70000)">ADD</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cap 2 black -->
+    <div class="product-card" data-cat="caps">
+      <div class="product-placeholder cap-2">
+        <svg width="100%" height="100%" viewBox="0 0 300 400" style="position:absolute;inset:0">
+          <rect width="300" height="400" fill="#0a0800"/>
+          <ellipse cx="150" cy="260" rx="110" ry="22" fill="#111" opacity="0.9"/>
+          <path d="M40 240 Q40 120 150 110 Q260 120 260 240 Z" fill="#1a1a1a"/>
+          <line x1="150" y1="110" x2="150" y2="240" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+          <circle cx="150" cy="113" r="8" fill="#222"/>
+          <text x="130" y="175" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="20" fill="rgba(212,255,0,0.85)">Limelight</text>
+          <text x="130" y="198" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="20" fill="rgba(212,255,0,0.85)">LL</text>
+          <rect x="90" y="252" width="120" height="10" rx="3" fill="#111"/>
+          <rect x="122" y="252" width="56" height="10" rx="3" fill="#0a0a0a"/>
+        </svg>
+      </div>
+      <span class="tag-new">NEW</span>
+      <button class="wishlist-btn" onclick="toggleWishlist(this)">♡</button>
+      <div class="product-info">
+        <p class="product-name">TRUCKER CAP — BLACK</p>
+        <p class="product-category">Caps · One Size</p>
+        <div class="product-footer">
+          <span class="product-price">UGX 65,000</span>
+          <button class="add-btn" onclick="addToCart('Trucker Cap — Black', 65000)">ADD</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── FEATURE STRIP ── -->
+<div class="feature-strip">
+  <div class="feature-item">
+    <div class="feature-icon">🚚</div>
+    <p class="feature-title">Kampala Delivery</p>
+    <p class="feature-desc">Same-day delivery within Kampala on orders placed before 2PM</p>
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon">✦</div>
+    <p class="feature-title">Premium Quality</p>
+    <p class="feature-desc">180–220gsm cotton. Prints that outlive the hype.</p>
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon">↩</div>
+    <p class="feature-title">Easy Returns</p>
+    <p class="feature-desc">Not the right fit? We've got you — 7-day return policy.</p>
+  </div>
+  <div class="feature-item">
+    <div class="feature-icon">🔒</div>
+    <p class="feature-title">Secure Payments</p>
+    <p class="feature-desc">MTN MoMo, Airtel Money, and card accepted.</p>
+  </div>
+</div>
+
+<!-- ── BRAND STORY ── -->
+<section class="story" id="story">
+  <div class="story-visual">
+    <div class="story-logo-big">
+      <svg width="80%" height="80%" viewBox="0 0 200 200">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(212,255,0,0.2)" stroke-width="1.5"/>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="rgba(212,255,0,0.08)" stroke-width="0.5"/>
+        <text x="100" y="118" text-anchor="middle" font-family="UnifrakturMaguntia, serif" font-size="64" fill="rgba(212,255,0,0.9)">LL</text>
+        <text x="100" y="158" text-anchor="middle" font-family="'Bebas Neue', sans-serif" font-size="12" letter-spacing="8" fill="rgba(212,255,0,0.4)">LIMELIGHT</text>
+      </svg>
+    </div>
+    <div class="story-accent-block"></div>
+  </div>
+  <div class="story-text">
+    <p class="section-label">— Who We Are</p>
+    <h2 class="section-heading">Born in the Streets</h2>
+    <p class="story-body">Limelight LL started with a simple belief: everyone deserves their moment in the spotlight. We make clothing for those who move through the city with intent — bold enough to be seen, sharp enough to be remembered.</p>
+    <p class="story-body">Every piece is designed and produced locally. From the Old English lettering on the front panel to the smiley-face graphics that carry our signature energy — this is Uganda's streetwear, built for the world.</p>
+    <button class="btn-primary">READ FULL STORY</button>
+    <div class="stats-row">
+      <div class="stat-item">
+        <p class="stat-number">2K+</p>
+        <p class="stat-label">Customers</p>
+      </div>
+      <div class="stat-item">
+        <p class="stat-number">12</p>
+        <p class="stat-label">Drops</p>
+      </div>
+      <div class="stat-item">
+        <p class="stat-number">100%</p>
+        <p class="stat-label">Local</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── NEWSLETTER ── -->
+<section class="newsletter" id="newsletter">
+  <p class="section-label">— Stay in the Loop</p>
+  <h2 class="section-heading">Get Early Access</h2>
+  <p style="color:rgba(245,240,232,0.5);font-size:0.9rem;max-width:380px;margin:0 auto;line-height:1.7;">Be first to know about new drops, exclusive offers, and pop-up events. No spam. Just heat.</p>
+  <div class="newsletter-form">
+    <input class="newsletter-input" type="email" placeholder="your@email.com" id="emailInput">
+    <button class="newsletter-btn" onclick="subscribe()">JOIN</button>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-brand">
+    <a href="#" class="nav-logo">Limelight</a>
+    <p class="footer-tagline">Streetwear made in Uganda.<br>Worn by the bold.</p>
+    <div class="footer-socials">
+      <a class="social-btn" href="#" title="Instagram">IG</a>
+      <a class="social-btn" href="#" title="TikTok">TK</a>
+      <a class="social-btn" href="#" title="WhatsApp">WA</a>
+      <a class="social-btn" href="#" title="Twitter/X">𝕏</a>
+    </div>
+  </div>
+  <div class="footer-col">
+    <h4>Shop</h4>
+    <ul>
+      <li><a href="#">All Products</a></li>
+      <li><a href="#">Tees</a></li>
+      <li><a href="#">Caps</a></li>
+      <li><a href="#">Hoodies</a></li>
+      <li><a href="#">New Arrivals</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Help</h4>
+    <ul>
+      <li><a href="#">Size Guide</a></li>
+      <li><a href="#">Returns</a></li>
+      <li><a href="#">Shipping</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Company</h4>
+    <ul>
+      <li><a href="#">Our Story</a></li>
+      <li><a href="#">Stockists</a></li>
+      <li><a href="#">Wholesale</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+<div class="footer-bottom">
+  <p>© 2025 Limelight LL. All rights reserved.</p>
+  <p>Made in Uganda 🇺🇬</p>
+</div>
+
+<!-- ── CART OVERLAY & DRAWER ── -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <span class="cart-title">YOUR BAG</span>
+    <button class="cart-close" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty-msg" id="cartEmpty">Your bag is empty.<br>Go add something 🔥</div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span class="cart-total-label">TOTAL</span>
+      <span class="cart-total-price" id="cartTotal">UGX 0</span>
+    </div>
+    <button class="checkout-btn" onclick="checkout()">CHECKOUT</button>
+  </div>
+</div>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast">Added to bag</div>
+
+<script>
+  // ── CART STATE ──
+  let cart = [];
+
+  function addToCart(name, price) {
+    const existing = cart.find(i => i.name === name);
+    if (existing) {
+      existing.qty++;
+    } else {
+      cart.push({ name, price, qty: 1 });
+    }
+    renderCart();
+    showToast(`${name} — Added!`);
+    openCart();
+  }
+
+  function removeFromCart(index) {
+    cart.splice(index, 1);
+    renderCart();
+  }
+
+  function renderCart() {
+    const container = document.getElementById('cartItems');
+    const emptyMsg = document.getElementById('cartEmpty');
+    const totalEl = document.getElementById('cartTotal');
+    const countEl = document.getElementById('cartCount');
+
+    const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+
+    countEl.textContent = count;
+    totalEl.textContent = `UGX ${total.toLocaleString()}`;
+
+    // Clear existing items (keep empty msg)
+    Array.from(container.querySelectorAll('.cart-item')).forEach(el => el.remove());
+
+    if (cart.length === 0) {
+      emptyMsg.style.display = 'block';
+    } else {
+      emptyMsg.style.display = 'none';
+      cart.forEach((item, i) => {
+        const el = document.createElement('div');
+        el.className = 'cart-item';
+        el.innerHTML = `
+          <div class="cart-item-thumb">LL</div>
+          <div class="cart-item-info">
+            <p class="cart-item-name">${item.name}</p>
+            <p class="cart-item-meta">Qty: ${item.qty}</p>
+            <p class="cart-item-price">UGX ${(item.price * item.qty).toLocaleString()}</p>
+          </div>
+          <button class="cart-remove" onclick="removeFromCart(${i})">✕ Remove</button>
+        `;
+        container.appendChild(el);
+      });
+    }
+  }
+
+  function openCart() {
+    document.getElementById('cartDrawer').classList.add('open');
+    document.getElementById('cartOverlay').classList.add('open');
+  }
+
+  function closeCart() {
+    document.getElementById('cartDrawer').classList.remove('open');
+    document.getElementById('cartOverlay').classList.remove('open');
+  }
+
+  function checkout() {
+    if (cart.length === 0) return;
+    showToast('Redirecting to checkout...');
+    setTimeout(() => {
+      cart = [];
+      renderCart();
+      closeCart();
+    }, 1500);
+  }
+
+  document.getElementById('cartBtn').addEventListener('click', openCart);
+
+  // ── TOAST ──
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), 2400);
+  }
+
+  // ── WISHLIST ──
+  function toggleWishlist(btn) {
+    btn.classList.toggle('liked');
+    btn.textContent = btn.classList.contains('liked') ? '♥' : '♡';
+  }
+
+  // ── FILTER ──
+  function filterProducts(cat, btn) {
+    document.querySelectorAll('.filter-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.product-card').forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.style.display = '';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // ── NEWSLETTER ──
+  function subscribe() {
+    const val = document.getElementById('emailInput').value;
+    if (!val || !val.includes('@')) { showToast('Enter a valid email'); return; }
+    showToast('You\'re on the list 🔥');
+    document.getElementById('emailInput').value = '';
+  }
+
+  // ── MOBILE MENU ──
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.add('open');
+  });
+  document.getElementById('mobileClose').addEventListener('click', closeMobile);
+  function closeMobile() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // ── SCROLL FADE IN ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.product-card, .stat-item, .feature-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>
